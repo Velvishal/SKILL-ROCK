@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="icon1/png" href="icon1.png">
+  <title>SKILL ROCK</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(120deg, #74ebd5, #9face6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .auth-container {
+      background: #fff;
+      width: 360px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .tab-buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .tab-buttons button {
+      background: none;
+      border: none;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 10px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s ease;
+    }
+
+    .tab-buttons button.active {
+      border-bottom: 2px solid #3498db;
+      color: #3498db;
+    }
+
+    form {
+      display: none;
+      animation: fadeIn 0.3s ease-in;
+    }
+
+    form.active {
+      display: block;
+    }
+
+    form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    form button {
+      width: 100%;
+      padding: 10px;
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    form button:hover {
+      background: #2980b9;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 400px) {
+      .auth-container {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div class="form-box">
+         <div class="site-name">SKILL ROCK</div>
+
+
+  <div class="auth-container">
+    <div class="tab-buttons">
+      <button id="login-tab" class="active">Login</button>
+      <button id="register-tab">Register</button>
+    </div>
+
+    <form id="login-form" class="active" action="index.html" method="GET">
+      <input type="text" placeholder="Username or Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+
+    <form id="register-form">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="text" placeholder="Username" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script>
+    const loginTab = document.getElementById("login-tab");
+    const registerTab = document.getElementById("register-tab");
+    const loginForm = document.getElementById("login-form");
+    const registerForm = document.getElementById("register-form");
+
+    loginTab.addEventListener("click", () => {
+      loginTab.classList.add("active");
+      registerTab.classList.remove("active");
+      loginForm.classList.add("active");
+      registerForm.classList.remove("active");
+    });
+
+    registerTab.addEventListener("click", () => {
+      registerTab.classList.add("active");
+      loginTab.classList.remove("active");
+      registerForm.classList.add("active");
+      loginForm.classList.remove("active");
+    });
+
+    // On page load
+  window.addEventListener('DOMContentLoaded', () => {
+    const loginLink = document.getElementById("login-link");
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    if (isLoggedIn === "true") {
+      loginLink.style.display = "none";
+    }
+  });
+  </script>
+
+
+
+
+</body>
+</html>

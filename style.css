@@ -1,0 +1,375 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f8fb;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background-color: #222;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f3b431;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #f3b431;
+}
+
+.hero {
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  animation: fadeInDown 1s ease;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-subtext {
+  font-size: 1.2rem;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 2rem;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #222;
+  color: #aaa;
+  margin-top: 2rem;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-hero {
+  background: linear-gradient(to right, #cc2b5e, #753a88);
+}
+
+.project-listing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+
+.project-card {
+  background: #fff;
+  border-left: 5px solid #f3b431;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  padding: 2rem;
+  width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.5s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.budget {
+  color: #2ecc71;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  background: #ecf0f1;
+  color: #333;
+  padding: 0.3rem 0.6rem;
+  margin: 0.3rem 0.2rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Talent Page Styles */
+.talent-hero {
+  background: linear-gradient(to right, #ee9ca7, #ffdde1);
+}
+
+.talent-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 4rem 2rem;
+  gap: 2rem;
+}
+
+.talent-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  padding: 2rem;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.7s ease;
+}
+
+.talent-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.talent-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.talent-card .role {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.skills span {
+  display: inline-block;
+  background: #f0f0f0;
+  margin: 4px;
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  border-radius: 16px;
+  color: #444;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* About Page Styles */
+.about-hero {
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: #fff;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about-content {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-text h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  color: #333;
+}
+
+.about-text p,
+.about-text ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.about-text ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-text ul li {
+  margin: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.about-text ul li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+}
+
+/* Enquiry Section */
+.enquiry-section {
+  margin-top: 4rem;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.enquiry-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s ease;
+}
+
+.enquiry-form input:focus,
+.enquiry-form textarea:focus {
+  border-color: #764ba2;
+  outline: none;
+}
+
+.enquiry-form button {
+  background: #764ba2;
+  color: #fff;
+  padding: 0.9rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.enquiry-form button:hover {
+  background: #5e3a9c;
+}
+
+#formMessage {
+  text-align: center;
+  margin-top: 1rem;
+  color: green;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive Layout */ 
+@media screen and (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-content {
+    padding: 2rem 1rem;
+  }
+
+  .enquiry-form {
+    padding: 0 1rem;
+  }
+}
+
+.site-name {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 1px;
+}
+
+
+
